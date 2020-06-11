@@ -1,5 +1,5 @@
 # C++ Wrapper fo FreeType (wft-lib)
-A very simple C++ wrapper for the Freetype library
+A very simple C++ wrapper for the Freetype library with support UFT8 strings.
 
 # Using
 **First**: add two rows in the you CMakeLists.txt for link wrapper as library:
@@ -18,9 +18,9 @@ target_link_libraries( application_name "${MY_APP_LIBRARIES}" wft)
 
 wft::font Font {"font/LiberationSans-Regular.ttf"};
 Font.set_size(0, 15);
-auto Bitmap = Font.make_bitmap_text("Привет тебе, WORLD!");
+auto Bitmap = Font.make_bitmap_text("Hello, World!");
 ```
 
 **It's all!!**
 
-For more information on using wrappers, see the example file "wft/sample/main.cpp".
+For more information on using this wft-lib, see the example file "wft/sample/main.cpp".
