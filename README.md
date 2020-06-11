@@ -1,4 +1,7 @@
 # C++ Wrapper fo FreeType (wft-lib)
+
+![sample](sample.png "Sample OpenGL window")
+
 A very simple C++ wrapper for the Freetype library with support UFT8 strings.
 
 # Using
