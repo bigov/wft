@@ -2,7 +2,7 @@ cmake_minimum_required( VERSION 3.0 )
 
 project(
   TestWFT VERSION "0.0.1.0"
-  DESCRIPTION "Example using FreeType wrapper"
+  DESCRIPTION "Example for using FreeType wrapper"
   HOMEPAGE_URL "https://www.trickrig.net"
   LANGUAGES "CXX"
   )
@@ -19,7 +19,6 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Debug)
 endif()
 
-## без установки программ
 SET( SKIP_INSTALL_ALL ON CACHE BOOL "" FORCE )
 SET( CMAKE_VERBOSE_MAKEFILE OFF )
 
@@ -31,8 +30,6 @@ if( ${CMAKE_SYSTEM_NAME} MATCHES "Windows" )
   SET( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mwindows -Wl,-subsystem,windows" )
 endif()
 
-#include_directories( SYSTEM "${CMAKE_SOURCE_DIR}/.." )
-
 find_package( PkgConfig REQUIRED )
 
 if( ${MINGW} )
@@ -42,7 +39,7 @@ endif()
 pkg_check_modules( GLFW REQUIRED glfw3 )
 
 add_subdirectory( "../glad" "glad" EXCLUDE_FROM_ALL )
-add_subdirectory( "../src" "wft" EXCLUDE_FROM_ALL )
+add_subdirectory( "../" "wft" EXCLUDE_FROM_ALL )
 
 add_executable( test-wft "main.cpp" "win.cpp" )
 target_link_libraries( test-wft "${GLFW_LIBRARIES}" glad wft)

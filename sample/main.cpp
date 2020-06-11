@@ -2,7 +2,7 @@
  * Example OpenGL application demo using Wrapper Free Font
  *
  */
-#include "../src/wft.hpp"
+#include "../wft.hpp"
 
 void opengl_window_show(const unsigned char* texture_data, int win_width, int win_height);
 

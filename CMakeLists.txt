@@ -4,7 +4,7 @@
 cmake_minimum_required( VERSION 3.15 )
 
 project(
-  lib_wft VERSION "0.0.1.0"
+  wft VERSION "0.0.1.2"
   DESCRIPTION "Simple using FreeType wrapper"
   HOMEPAGE_URL "https://www.trickrig.net"
   LANGUAGES "CXX"
