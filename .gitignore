@@ -1,0 +1,15 @@
+_bin_
+_bin
+_dbg_
+_dbg
+CMakeLists.txt.user
+CMakeLists.txt.user.*
+*.dll
+*.exe
+*.o
+*~
+*.swp
+tags
+*.so
+*.so.*
+.back
