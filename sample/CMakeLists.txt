@@ -37,8 +37,7 @@ if( ${MINGW} )
 endif()
 
 pkg_check_modules( GLFW REQUIRED glfw3 )
-
-add_subdirectory( "../glad" "glad" EXCLUDE_FROM_ALL )
+add_subdirectory( "./glad" "glad" EXCLUDE_FROM_ALL )
 add_subdirectory( "../" "wft" EXCLUDE_FROM_ALL )
 
 add_executable( test-wft "main.cpp" "win.cpp" )
